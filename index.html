@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Amaanah Nexus - Visitor Entry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="visitor-body">
+
+<!-- CURSOR GLOW -->
+<div class="cursor-glow"></div>
+
+<!-- FLOATING BLURS -->
+<div class="bg-shape shape1"></div>
+<div class="bg-shape shape2"></div>
+
+<div class="visitor-container fade-in" id="tilt-card">
+
+  <!-- LEFT -->
+  <div class="visitor-left">
+    <h1>Amaanah Nexus</h1>
+    <p>Hospital & Physiotherapy Center</p>
+
+    <ul>
+      <li>✔ Affordable Healthcare</li>
+      <li>✔ Physiotherapy Services</li>
+      <li>✔ Patient Care & Support</li>
+    </ul>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="visitor-right">
+    <h2>Visitor Registration</h2>
+
+    <form onsubmit="submitVisitor(event)">
+      <input type="text" id="vname" placeholder="Full Name" required>
+      <input type="tel" id="vnumber" placeholder="Mobile Number" required>
+      <textarea id="vaddress" placeholder="Address" required></textarea>
+      <button>Continue</button>
+    </form>
+  </div>
+
+</div>
+
+<!-- TOAST -->
+<div id="visitorToast" class="visitor-toast"></div>
+
+<!-- LOADER -->
+<div id="loader" class="loader">
+  <div class="spinner"></div>
+</div>
+
+<script src="script.js"></script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/29/06/20260429061958-K4S99RO6.js" defer></script>
+    
+</body>
+</html>

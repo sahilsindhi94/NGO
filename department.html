@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Departments - Amaanah Nexus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Amaanah Nexus</h2>
+  <ul>
+    <li><a href="about.html">About</a></li>
+    <li><a href="department.html">Departments</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="help.html">Help</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1600&auto=format&fit=crop" class="hero-img">
+  <div class="hero-overlay">
+    <h1>Our Departments</h1>
+    <p>Select service & register patient</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="content">
+
+  <div class="card-container">
+
+    <div class="card" onclick="openForm('Hospital Services')">
+      <h3>🏥 Hospital</h3>
+      <p>Emergency care & treatment</p>
+    </div>
+
+    <div class="card" onclick="openForm('Physiotherapy')">
+      <h3>🧘 Physiotherapy</h3>
+      <p>Recovery & therapy sessions</p>
+    </div>
+
+    <div class="card" onclick="openForm('Medical Support')">
+      <h3>💊 Medical Support</h3>
+      <p>Affordable medicines</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MODAL FORM -->
+<div id="formModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeForm()">&times;</span>
+    <h2 id="deptTitle"></h2>
+
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Patient Name" id="name" required>
+      <input type="text" placeholder="Disease / Problem" id="disease" required>
+      <input type="tel" placeholder="Mobile Number" id="number" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+<div id="patientPopup" class="patient-popup">
+  <p id="patientMessage"></p>
+</div>
+<!-- LOADER -->
+<div id="loader" class="loader">
+  <div class="spinner"></div>
+</div>
+<script src="script.js"></script>
+
+    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/04/29/06/20260429061958-K4S99RO6.js" defer></script>
+    
+</body>
+</html>
