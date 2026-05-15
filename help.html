@@ -2,66 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Help - Amaanah Nexus</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav>
-  <h2>Amaanah Nexus</h2>
-  <ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="department.html">Departments</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="help.html">Help</a></li>
-  </ul>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Amaanah Nexus</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1600&auto=format&fit=crop" class="hero-img">
-  <div class="hero-overlay">
-    <h1>Help & Support</h1>
-    <p>Your health is our priority</p>
+  <div class="hero-content">
+    <div class="hero-copy">
+      <p class="eyebrow">Help Center</p>
+      <h1>Trusted Support</h1>
+      <p>We provide fast answers, appointments, and emergency guidance for your healthcare journey.</p>
+    </div>
+    <div class="hero-image-wrap">
+      <img class="hero-phone" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1600&auto=format&fit=crop" alt="Help support" />
+    </div>
   </div>
 </section>
 
 <section class="content">
-
-  <h2>How We Help</h2>
-
-  <div class="info-grid">
-
-    <div class="info-card">
-      <h3>💬 Support</h3>
-      <p>24/7 assistance available</p>
-    </div>
-
-    <div class="info-card">
-      <h3>🏥 Services</h3>
-      <p>Hospital & physiotherapy help</p>
-    </div>
-
-    <div class="info-card">
-      <h3>🚑 Emergency</h3>
-      <p>Immediate medical help</p>
-    </div>
-
-    <div class="info-card">
-      <h3>📧 Queries</h3>
-      <p>Email us anytime</p>
-    </div>
-
+  <div class="section-head">
+    <h2>How We Help</h2>
+    <p>Emergency support, service guidance, and patient care information whenever you need it.</p>
   </div>
 
+  <div class="info-grid">
+    <div class="info-card">
+      <h3>💬 Support</h3>
+      <p>24/7 assistance and compassionate counseling.</p>
+    </div>
+    <div class="info-card">
+      <h3>🏥 Services</h3>
+      <p>Hospital treatment and physiotherapy care options.</p>
+    </div>
+    <div class="info-card">
+      <h3>🚑 Emergency</h3>
+      <p>Immediate help and fast patient triage support.</p>
+    </div>
+    <div class="info-card">
+      <h3>📧 Queries</h3>
+      <p>Email us anytime for follow-up questions or appointment support.</p>
+    </div>
+  </div>
 </section>
-<!-- LOADER -->
-<div id="loader" class="loader">
-  <div class="spinner"></div>
-</div>
 
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h2>Amaanah Nexus</h2>
+      <p>Modern hospital care, physiotherapy support, and compassionate outreach for every community.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="department.html">Departments</a>
+        <a href="contact.html">Contact</a>
+        <a href="help.html">Help</a>
+      </nav>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: info@amaanahnexus.com</p>
+      <p>Phone: +1 234 567 8900</p>
+      <p>Address: 123 Care Street, Health City</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Amaanah Nexus. Serving the community with care.</p>
+  </div>
+</footer>
+
+<div id="loader" class="loader"><div class="spinner"></div></div>
+<script src="script.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2026/04/29/06/20260429061958-K4S99RO6.js" defer></script>
-    
 </body>
 </html>

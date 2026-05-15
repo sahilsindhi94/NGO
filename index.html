@@ -1,59 +1,126 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amaanah Nexus - Visitor Entry</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="visitor-body">
 
-<!-- CURSOR GLOW -->
-<div class="cursor-glow"></div>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Amaanah Nexus</a>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="department.html">Departments</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<!-- FLOATING BLURS -->
-<div class="bg-shape shape1"></div>
-<div class="bg-shape shape2"></div>
+  <div class="cursor-glow"></div>
+  <div class="bg-shape shape1"></div>
+  <div class="bg-shape shape2"></div>
 
-<div class="visitor-container fade-in" id="tilt-card">
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Community Healthcare</p>
+          <h1 id="greetingText">Amaanah Nexus</h1>
+          <p>Modern hospital care, physiotherapy support, and compassionate outreach for every community.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#visitor-form">Register Visitor</a>
+            <a class="button button-secondary" href="department.html">Explore Departments</a>
+          </div>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="hero-phone"
+            src="https://images.pexels.com/photos/6894025/pexels-photo-6894025.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Healthcare team" />
+        </div>
+      </div>
+    </section>
 
-  <!-- LEFT -->
-  <div class="visitor-left">
-    <h1>Amaanah Nexus</h1>
-    <p>Hospital & Physiotherapy Center</p>
+    <section class="content">
+      <div class="section-head">
+        <h2>Why choose Amaanah Nexus?</h2>
+        <p>We blend trusted medical care with approachable community service so every patient feels supported.</p>
+      </div>
 
-    <ul>
-      <li>✔ Affordable Healthcare</li>
-      <li>✔ Physiotherapy Services</li>
-      <li>✔ Patient Care & Support</li>
-    </ul>
+      <div class="info-grid feature-grid"></div>
+    </section>
+
+    <section class="visitor-panel" id="visitor-form">
+      <div class="section-head">
+        <h2>Visitor Registration</h2>
+        <p>Register now for the quickest support and a smooth arrival process.</p>
+      </div>
+
+      <div class="visitor-container fade-in" id="tilt-card">
+        <div class="visitor-left">
+          <h1>Welcome Guest</h1>
+          <p>Enter your details and continue to learn more about how we care for patients.</p>
+          <ul>
+            <li>Affordable healthcare</li>
+            <li>Physiotherapy support</li>
+            <li>Patient-first service</li>
+          </ul>
+        </div>
+        <div class="visitor-right">
+          <h2>Visitor Registration</h2>
+          <form onsubmit="submitVisitor(event)">
+            <input type="text" id="vname" placeholder="Full Name" required>
+            <input type="tel" id="vnumber" placeholder="Mobile Number" required>
+            <textarea id="vaddress" placeholder="Address" required></textarea>
+            <button type="submit">Continue</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h2>Amaanah Nexus</h2>
+        <p>Modern hospital care, physiotherapy support, and compassionate outreach for every community.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="department.html">Departments</a>
+          <a href="contact.html">Contact</a>
+          <a href="help.html">Help</a>
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: info@amaanahnexus.com</p>
+        <p>Phone: +1 234 567 8900</p>
+        <p>Address: 123 Care Street, Health City</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Amaanah Nexus. Serving the community with care.</p>
+    </div>
+  </footer>
+
+  <div id="visitorToast" class="visitor-toast"></div>
+  <div id="loader" class="loader">
+    <div class="spinner"></div>
   </div>
-
-  <!-- RIGHT -->
-  <div class="visitor-right">
-    <h2>Visitor Registration</h2>
-
-    <form onsubmit="submitVisitor(event)">
-      <input type="text" id="vname" placeholder="Full Name" required>
-      <input type="tel" id="vnumber" placeholder="Mobile Number" required>
-      <textarea id="vaddress" placeholder="Address" required></textarea>
-      <button>Continue</button>
-    </form>
-  </div>
-
-</div>
-
-<!-- TOAST -->
-<div id="visitorToast" class="visitor-toast"></div>
-
-<!-- LOADER -->
-<div id="loader" class="loader">
-  <div class="spinner"></div>
-</div>
-
-<script src="script.js"></script>
-
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
-<script src="https://files.bpcontent.cloud/2026/04/29/06/20260429061958-K4S99RO6.js" defer></script>
-    
+  <script src="script.js"></script>
+  <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+  <script src="https://files.bpcontent.cloud/2026/04/29/06/20260429061958-K4S99RO6.js" defer></script>
 </body>
+
 </html>

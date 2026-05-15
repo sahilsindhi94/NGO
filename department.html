@@ -2,61 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Departments - Amaanah Nexus</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <h2>Amaanah Nexus</h2>
-  <ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="department.html">Departments</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="help.html">Help</a></li>
-  </ul>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Amaanah Nexus</a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="help.html">Help</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1600&auto=format&fit=crop" class="hero-img">
-  <div class="hero-overlay">
-    <h1>Our Departments</h1>
-    <p>Select service & register patient</p>
+  <div class="hero-content">
+    <div class="hero-copy">
+      <p class="eyebrow">Our Services</p>
+      <h1>Departments & Booking</h1>
+      <p>Choose the care you need and register a patient in just a few taps.</p>
+    </div>
+    <div class="hero-image-wrap">
+      <img class="hero-phone" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1600&auto=format&fit=crop" alt="Department support" />
+    </div>
   </div>
 </section>
 
-<!-- CONTENT -->
 <section class="content">
+  <div class="section-head">
+    <h2>Choose a Department</h2>
+    <p>Select the service that best fits your patient’s needs.</p>
+  </div>
 
   <div class="card-container">
-
-    <div class="card" onclick="openForm('Hospital Services')">
+    <div class="card" onclick="openForm(event, 'Hospital Services')">
       <h3>🏥 Hospital</h3>
-      <p>Emergency care & treatment</p>
+      <p>Emergency care, treatment plans, and inpatient services.</p>
     </div>
-
-    <div class="card" onclick="openForm('Physiotherapy')">
+    <div class="card" onclick="openForm(event, 'Physiotherapy')">
       <h3>🧘 Physiotherapy</h3>
-      <p>Recovery & therapy sessions</p>
+      <p>Personalized recovery programs and therapy sessions.</p>
     </div>
-
-    <div class="card" onclick="openForm('Medical Support')">
+    <div class="card" onclick="openForm(event, 'Medical Support')">
       <h3>💊 Medical Support</h3>
-      <p>Affordable medicines</p>
+      <p>Medication guidance, follow-ups, and affordable support.</p>
     </div>
-
   </div>
-
 </section>
 
-<!-- MODAL FORM -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h2>Amaanah Nexus</h2>
+      <p>Modern hospital care, physiotherapy support, and compassionate outreach for every community.</p>
+    </div>
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="department.html">Departments</a>
+        <a href="contact.html">Contact</a>
+        <a href="help.html">Help</a>
+      </nav>
+    </div>
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: info@amaanahnexus.com</p>
+      <p>Phone: +1 234 567 8900</p>
+      <p>Address: 123 Care Street, Health City</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Amaanah Nexus. Serving the community with care.</p>
+  </div>
+</footer>
+
 <div id="formModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeForm()">&times;</span>
     <h2 id="deptTitle"></h2>
-
     <form onsubmit="submitForm(event)">
       <input type="text" placeholder="Patient Name" id="name" required>
       <input type="text" placeholder="Disease / Problem" id="disease" required>
@@ -65,17 +97,11 @@
     </form>
   </div>
 </div>
-<div id="patientPopup" class="patient-popup">
-  <p id="patientMessage"></p>
-</div>
-<!-- LOADER -->
-<div id="loader" class="loader">
-  <div class="spinner"></div>
-</div>
-<script src="script.js"></script>
 
-    <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+<div id="patientPopup" class="patient-popup"><p id="patientMessage"></p></div>
+<div id="loader" class="loader"><div class="spinner"></div></div>
+<script src="script.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2026/04/29/06/20260429061958-K4S99RO6.js" defer></script>
-    
 </body>
 </html>
